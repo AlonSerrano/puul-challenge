@@ -9,9 +9,14 @@ Para Windows y Mac, Docker Desktop incluye Docker Compose, por lo que solo neces
 Descarga Docker Desktop desde Docker Hub.
 Sigue las instrucciones de instalación proporcionadas en la página de descarga.
 
+![image](https://github.com/AlonSerrano/puul-challenge/assets/10080082/a4c68010-b3d0-4b43-adde-46c8ff87aec2)
+
+
 ## Lanzar App
 
+```
 docker-compose up --build -d
+```
 
 
 ## Endpoints
