@@ -35,7 +35,7 @@ http://localhost:3000
 
 - **Crear Tarea**: `POST /tasks` - Crea una nueva tarea, asignándola a uno o más usuarios.
 - **Listar Tareas**: `GET /tasks` - Lista todas las tareas con opciones de filtrado y ordenamiento.
-- **Actualizar Tarea**: `PUT /tasks/:id` - Actualiza los detalles de una tarea, incluyendo la reasignación de usuarios.
+- **Actualizar Tarea**: `PATCH /tasks/:id` - Actualiza los detalles de una tarea, incluyendo la reasignación de usuarios.
 - **Eliminar Tarea**: `DELETE /tasks/:id` - Elimina una tarea específica.
 
 ### Analíticas
