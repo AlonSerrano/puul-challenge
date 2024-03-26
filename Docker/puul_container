@@ -1,0 +1,23 @@
+# Usamos una imagen de Node.js como base
+FROM node:16-alpine
+
+# Establecemos el directorio de trabajo
+WORKDIR /usr/src/app
+
+# Copiamos el package.json y el package-lock.json (si existe)
+COPY ../../package*.json ./
+
+# Instalamos las dependencias de la aplicación
+RUN npm install
+
+# Copiamos el resto de los archivos de la aplicación
+COPY ../ .
+
+# Construimos la aplicación para producción
+RUN npm run build
+
+# Exponemos el puerto en el que corre la aplicación
+EXPOSE 3000
+
+# Comando para correr la aplicación
+CMD ["node", "dist/main"]

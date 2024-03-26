@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    container_name: nestjs_puul_challenge_app
+    build:
+      context: .
+      dockerfile: Docker/puul_container
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://testuser:yourpassword@db:5432/puul_challenge
+
+  db:
+    container_name: postgres_db
+    image: postgres:13
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: puul_challenge
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
