@@ -18,6 +18,11 @@ Sigue las instrucciones de instalación proporcionadas en la página de descarga
 docker-compose up --build -d
 ```
 
+Una vez en tu local solo necesitas apuntar los request a
+
+```
+http://localhost:3000
+```
 
 ## Endpoints
 
